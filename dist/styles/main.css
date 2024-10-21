@@ -57,11 +57,24 @@ header > .container {
 
 .closeMenuButton svg {
     width: 30px;
+    cursor: pointer;
 }
 
 .closeMenuButton {
+    display: none;
     text-align: right;
     padding: 20px;
+
+}
+
+
+.burger {
+    display: none;
+}
+
+.overlay {
+    display: none;
+    cursor: pointer;
 }
 
 
@@ -96,5 +109,25 @@ header > .container {
 
     .mainMenu {
         display: block;
+    }
+
+    .closeMenuButton {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .overlay.isVisible {
+        display:block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        background-color: black;
+        opacity: 0.25;
+        z-index: 9;
     }
 }
